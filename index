@@ -1,0 +1,14 @@
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+
+# 设置WebDriver路径
+webdriver_path = 'C:\\WebDriver\\bin\\chromedriver.exe'  # 替换为您的WebDriver路径
+
+# 初始化Chrome浏览器
+service = Service(webdriver_path)
+driver = webdriver.Chrome(service=service)
+
+# 打开指定的网页
+url = 'https://www.google.com/maps/d/u/0/home'
+driver.get(url)
